@@ -1,4 +1,4 @@
-package tech.developingdeveloper.fileuploadplayground.config.jackson
+package tech.developingdeveloper.springbootfileupload.config.jackson
 
 import com.fasterxml.jackson.core.JsonGenerator
 import com.fasterxml.jackson.databind.JsonSerializer

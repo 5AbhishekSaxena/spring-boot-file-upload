@@ -1,4 +1,4 @@
-package tech.developingdeveloper.fileuploadplayground.utils
+package tech.developingdeveloper.springbootfileupload.utils
 
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter

@@ -1,4 +1,4 @@
-package tech.developingdeveloper.fileuploadplayground.web.exception
+package tech.developingdeveloper.springbootfileupload.web.exception
 
 import org.springframework.http.HttpStatus
 import java.time.LocalDateTime

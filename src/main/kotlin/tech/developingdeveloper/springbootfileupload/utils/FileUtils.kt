@@ -1,4 +1,4 @@
-package tech.developingdeveloper.fileuploadplayground.utils
+package tech.developingdeveloper.springbootfileupload.utils
 
 import org.springframework.util.StringUtils
 import org.springframework.web.multipart.MultipartFile

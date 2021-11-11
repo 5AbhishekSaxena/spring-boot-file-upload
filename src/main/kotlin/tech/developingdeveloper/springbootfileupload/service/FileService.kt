@@ -1,4 +1,4 @@
-package tech.developingdeveloper.fileuploadplayground.service
+package tech.developingdeveloper.springbootfileupload.service
 
 import org.springframework.core.io.FileSystemResource
 import org.springframework.web.multipart.MultipartFile

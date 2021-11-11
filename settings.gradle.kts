@@ -1,1 +1,1 @@
-rootProject.name = "file-upload-playground"
+rootProject.name = "spring-boot-file-upload"

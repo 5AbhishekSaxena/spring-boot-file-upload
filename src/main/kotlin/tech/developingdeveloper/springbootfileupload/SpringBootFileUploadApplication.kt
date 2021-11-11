@@ -1,11 +1,11 @@
-package tech.developingdeveloper.fileuploadplayground
+package tech.developingdeveloper.springbootfileupload
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class FileUploadPlaygroundApplication
+class SpringBootFileUploadApplication
 
 fun main(args: Array<String>) {
-	runApplication<FileUploadPlaygroundApplication>(*args)
+	runApplication<SpringBootFileUploadApplication>(*args)
 }
