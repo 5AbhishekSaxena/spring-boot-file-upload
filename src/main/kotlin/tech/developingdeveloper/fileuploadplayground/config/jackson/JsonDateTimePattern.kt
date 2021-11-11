@@ -7,5 +7,5 @@ package tech.developingdeveloper.fileuploadplayground.config.jackson
 
 interface JsonDateTimePattern {
     val pattern: String
-        get() = "MMMM dd, yyyy hh:mm:ss"
+        get() = "MMMM dd, yyyy HH:mm:ss"
 }
