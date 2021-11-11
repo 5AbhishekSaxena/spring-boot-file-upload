@@ -19,12 +19,6 @@ import java.time.format.DateTimeFormatter
 class JacksonConfiguration {
 
     @Bean
-    fun localDateTimeSerializer() = LocalDateTimeSerializer()
-
-    @Bean
-    fun localDateTimeDeserializer() = LocalDateTimeDeserializer()
-
-    @Bean
     fun javaTimeModule(
         localDateTimeSerializer: LocalDateTimeSerializer,
         localDateTimeDeserializer: LocalDateTimeDeserializer
