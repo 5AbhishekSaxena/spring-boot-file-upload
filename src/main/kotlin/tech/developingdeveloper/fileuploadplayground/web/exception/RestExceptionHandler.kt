@@ -16,14 +16,12 @@ class RestExceptionHandler {
 
     @ExceptionHandler(Exception::class)
     fun handleGeneralExceptions(exception: Exception): ResponseEntity<ApiError> {
-        exception.printStackTrace()
         val apiError = ApiError(exception.message)
         return ResponseEntity(apiError, apiError.httpStatus)
     }
 
     @ExceptionHandler(FileNotFoundException::class)
     fun handleFileNotFoundException(exception: FileNotFoundException): ResponseEntity<ApiError> {
-        exception.printStackTrace()
         val apiError = ApiError(exception.message, httpStatus = HttpStatus.NOT_FOUND)
         return ResponseEntity(apiError, apiError.httpStatus)
     }
