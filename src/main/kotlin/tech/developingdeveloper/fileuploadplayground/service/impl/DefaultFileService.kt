@@ -1,11 +1,14 @@
 package tech.developingdeveloper.fileuploadplayground.service.impl
 
+import org.springframework.core.io.FileSystemResource
 import org.springframework.stereotype.Service
 import org.springframework.web.multipart.MultipartFile
 import tech.developingdeveloper.fileuploadplayground.service.FileService
 import tech.developingdeveloper.fileuploadplayground.utils.formatFileName
 import tech.developingdeveloper.fileuploadplayground.utils.getCurrentTimestamp
 import tech.developingdeveloper.fileuploadplayground.utils.getFileNameAndExtension
+import java.io.File
+import java.io.FileNotFoundException
 import java.nio.file.Files
 import java.nio.file.Paths
 
@@ -45,5 +48,13 @@ class DefaultFileService : FileService {
     private fun writeFileAtDestination(destination: String, bytes: ByteArray) {
         val path = Paths.get(destination)
         Files.write(path, bytes)
+    }
+
+    override fun getImage(fileName: String): FileSystemResource {
+        val destination = getDestination(fileName)
+        val file = File(destination)
+        if (!file.isFile) throw FileNotFoundException("File with $fileName not found.")
+
+        return FileSystemResource(file)
     }
 }

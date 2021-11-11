@@ -1,5 +1,6 @@
 package tech.developingdeveloper.fileuploadplayground.service
 
+import org.springframework.core.io.FileSystemResource
 import org.springframework.web.multipart.MultipartFile
 
 
@@ -12,4 +13,5 @@ interface FileService {
     val rootFolder: String
 
     fun saveImage(imageFile: MultipartFile): String
+    fun getImage(fileName: String): FileSystemResource
 }
