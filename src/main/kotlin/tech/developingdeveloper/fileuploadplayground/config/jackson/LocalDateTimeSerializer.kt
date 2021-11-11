@@ -1,0 +1,20 @@
+package tech.developingdeveloper.fileuploadplayground.config.jackson
+
+import com.fasterxml.jackson.core.JsonGenerator
+import com.fasterxml.jackson.databind.JsonSerializer
+import com.fasterxml.jackson.databind.SerializerProvider
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
+class LocalDateTimeSerializer : JsonSerializer<LocalDateTime>(), JsonDateTimePattern {
+    override fun serialize(
+        localDateTime: LocalDateTime?,
+        jsonGenerator: JsonGenerator?,
+        serializerProvider: SerializerProvider?
+    ) {
+        val dateTimeFormatter = DateTimeFormatter.ofPattern(pattern)
+        val formattedDateTime = dateTimeFormatter.format(localDateTime)
+
+        jsonGenerator?.writeString(formattedDateTime)
+    }
+}
