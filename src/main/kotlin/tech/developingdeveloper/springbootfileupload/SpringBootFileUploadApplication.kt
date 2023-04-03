@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class SpringBootFileUploadApplication
 
 fun main(args: Array<String>) {
-	runApplication<SpringBootFileUploadApplication>(*args)
+    runApplication<SpringBootFileUploadApplication>(*args)
 }

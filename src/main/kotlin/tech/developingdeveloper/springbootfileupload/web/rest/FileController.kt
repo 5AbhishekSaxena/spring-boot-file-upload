@@ -14,7 +14,6 @@ import org.springframework.web.multipart.MultipartFile
 import tech.developingdeveloper.springbootfileupload.service.FileService
 import javax.servlet.http.HttpServletRequest
 
-
 /**
  * Created by Abhishek Saxena on 11-11-2021.
  */
@@ -37,7 +36,7 @@ class FileController(
 
     private fun getFileAccessUrl(requestURL: StringBuffer?, fileName: String): String {
         val baseUrl = requestURL ?: Exception("Invalid requestURL")
-        return "${baseUrl}/$fileName"
+        return "$baseUrl/$fileName"
     }
 
     @GetMapping("/{fileName}", produces = [MediaType.IMAGE_JPEG_VALUE])

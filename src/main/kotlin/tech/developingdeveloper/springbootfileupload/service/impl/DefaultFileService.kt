@@ -41,7 +41,7 @@ class DefaultFileService : FileService {
     ): String {
         val (fileName, fileExtension) = getFileNameAndExtension(imageFile)
         val formattedFileName = formatFileName(fileName)
-        return "${prefix}${prefixSep}${formattedFileName}${postfixSep}${postFix}.${fileExtension}"
+        return "${prefix}${prefixSep}${formattedFileName}${postfixSep}$postFix.$fileExtension"
             .replace("(_{2,})".toRegex(), "_")
     }
 

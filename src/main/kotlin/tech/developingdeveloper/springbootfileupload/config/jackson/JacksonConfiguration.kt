@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import java.time.LocalDateTime
 
-
 /**
  * Created by Abhishek Saxena on 20-09-2021.
  */
