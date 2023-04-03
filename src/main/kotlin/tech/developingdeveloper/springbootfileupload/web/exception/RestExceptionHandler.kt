@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.RestControllerAdvice
 import java.io.FileNotFoundException
 
-
 /**
  * Created by Abhishek Saxena on 12-11-2021.
  */
