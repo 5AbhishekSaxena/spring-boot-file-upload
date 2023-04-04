@@ -1,11 +1,13 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
+@Suppress("DSL_SCOPE_VIOLATION", "UnstableApiUsage")
 plugins {
-    id("org.springframework.boot") version "2.5.6"
-    id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    id("org.jlleitschuh.gradle.ktlint") version "11.3.1"
-    kotlin("jvm") version "1.5.31"
-    kotlin("plugin.spring") version "1.5.31"
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.kotlin.lang)
+    alias(libs.plugins.kotlin.spring)
+
+    alias(libs.plugins.ktlint)
 }
 
 group = "tech.developingdeveloper"
@@ -17,14 +19,15 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web:2.5.6")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.0")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation(platform(SpringBootPlugin.BOM_COORDINATES))
+    implementation(libs.spring.boot.starter.web)
+    implementation(libs.jackson.kotlin)
+    implementation(libs.kotlin.reflect)
+    implementation(libs.kotlin.stdlib)
 
-    implementation("com.google.guava:guava:31.0.1-jre")
+    implementation(libs.guava)
 
-    testImplementation("org.springframework.boot:spring-boot-starter-test:2.5.6")
+    testImplementation(libs.spring.boot.starter.test)
 }
 
 tasks.withType<KotlinCompile> {
